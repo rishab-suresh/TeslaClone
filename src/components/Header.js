@@ -11,21 +11,21 @@ function Header() {
 
   return (
     <Container>
-      <a>
+      <a href="/">
         <img src="/images/logo.svg" alt="Tesla" />
       </a>
       <Menu>
         {cars &&
           cars.map((car, index) => (
-            <a href="#" key={index}>
+            <a href="/" key={index}>
               {car}{" "}
             </a>
           ))}
       </Menu>
 
       <RightMenu>
-        <a href="#">Shop</a>
-        <a href="#">Tesla Account</a>
+        <a href="/">Shop</a>
+        <a href="/">Tesla Account</a>
         <CustomMenu onClick={() => setIsClosed(true)}></CustomMenu>
       </RightMenu>
       <BurgerNav show={isClosed}>
@@ -35,7 +35,7 @@ function Header() {
         {cars &&
           cars.map((car, index) => (
             <li key={index}>
-              <a href="#">{car}</a>
+              <a href="/">{car}</a>
             </li>
           ))}
       </BurgerNav>
